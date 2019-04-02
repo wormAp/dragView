@@ -264,7 +264,7 @@ var uesrConfig =[{
 }]
 
 Face.runPreview(uesrConfig);
-Face.changePainting("2000px","1400px")
+//Face.changePainting("2000px","1400px")
 //
 // Face.changeBgColor("#ddd");
 function change() {
