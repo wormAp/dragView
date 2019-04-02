@@ -1,0 +1,17 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#root{
+    height: 100%;
+}
+.yt-dataView-select{
+    background: #0c628b59;
+    outline: 2px dashed #fff;
+    outline-offset: -2px;
+}
+/*.yt-dataView-content:hover{*/
+    /*background-color: #ddd;*/
+/*}*/
