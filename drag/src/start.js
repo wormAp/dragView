@@ -394,6 +394,9 @@
     function getPreviewJsonData() {
         return Generate.generate.getPreviewJsonData();
     }
+    function selectByKey(key) {
+        Generate.generate.selectByKey(key);
+    }
     function changeBgColor(color) {
         Generate.generate.changeBgColor(color);
     }
@@ -408,6 +411,7 @@
         Generate.generate.render(projectConfigs);
     }
     nameSpace.Face = {
+        selectByKey:selectByKey,
         getPreviewJsonData:getPreviewJsonData,
         isShowBgColor:isShowBgColor,
         runPreview:runPreview,

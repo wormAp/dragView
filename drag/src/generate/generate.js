@@ -154,6 +154,14 @@
             render.render(!!isPreview);
             return ({componentsMap:componentsMap,render:render});
         },
+        selectByKey:function (key) {
+            if( this._projectMap){
+                var component = this._projectMap.getComponent(key);
+                if(component){
+                    component.getCurrentDom().onclick();
+                }
+            }
+        },
         renderLayout:function (configs) {
             var self = this;
             configs = configs || {};
