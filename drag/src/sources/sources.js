@@ -13,7 +13,9 @@ window.YT.DataView = window.YT.DataView || {};
         LAYOUT:"layout",
         ROW:"row",
         COL:"col",
-        SUSPENSION:"suspension"
+        SUSPENSION:"suspension",
+        CONTENTS:"contents",
+        PAGES:"pages",
     });
     /**
      * 匹配注入
@@ -64,7 +66,11 @@ window.YT.DataView = window.YT.DataView || {};
             _configure:config._configure || {},
             rootKey:config.rootKey || "",
             leaf:config.leaf || false,
-            background:config.background || ""
+            background:config.background || "",
+            // text:config.text || "",
+            isShow:typeof config.isShow ==="boolean"?config.isShow:true,
+            _type:config._type||"",
+            contentsKey:config.contentsKey||"",
         };
         // if(config.shows){
         //     config.shows.type = config.shows.type || "div";
@@ -74,6 +80,31 @@ window.YT.DataView = window.YT.DataView || {};
     }
     _elementMap.register(COMPONENTS_TYPE.CONTENT,Content);
 
+    function Contents(config) {
+        config = config || {};
+        var element = {
+            $type:COMPONENTS_TYPE.CONTENTS,
+            put:typeof config.put === "boolean"?config.put:true,
+            key:config.key||null,
+            bgColor:config.bgColor || null,
+            parentKey:config.parentKey || null,
+            height:config.height || "100%",
+            width:config.width || "100%",
+            overflowX:config.overflowX || "hidden",
+            overflowY:config.overflowY || "hidden",
+            dropComponent:config.dropComponent || false,
+            child:config.child || [],
+            handles:config.handles || false,
+            _configure:config._configure || {},
+            rootKey:config.rootKey || "",
+            leaf:config.leaf || false,
+            background:config.background || "",
+            contentsNumber:config.contentsNumber || 2,
+            currentIndex:config.currentIndex || 1,
+        };
+        return element;
+    }
+    _elementMap.register(COMPONENTS_TYPE.CONTENTS,Contents);
     /**
      *
      * @param config
@@ -125,6 +156,7 @@ window.YT.DataView = window.YT.DataView || {};
             rootKey:config.rootKey || "",
             appCom:config.appCom || {},//组件数据
             component:config.component || {},//组件数据结构
+            contentsKey:config.contentsKey || "",
             propsGlobal:{
                 width:config.propsGlobal.width || "100%",
                 height:config.propsGlobal.height || "100%",
@@ -152,15 +184,31 @@ window.YT.DataView = window.YT.DataView || {};
             key:config.key||null,
             parentKey:config.parentKey || null,
             rootKey:config.rootKey || "",
-           // data:config.data || {},//组件数据结构
+            // data:config.data || {},//组件数据结构
             child:[],
             leaf:config.leaf || false,
-           // background:config.background || ""
+            // background:config.background || ""
         };
         return element;
     }
     _elementMap.register(COMPONENTS_TYPE.LAYOUT,Layout);
 
+    function Pages(config) {
+        config = config || {};
+        var element = {
+            $type:COMPONENTS_TYPE.PAGES,
+            put:typeof config.put === "boolean"?config.put:true,
+            key:config.key||null,
+            parentKey:config.parentKey || null,
+            rootKey:config.rootKey || "",
+            // data:config.data || {},//组件数据结构
+            child:[],
+            leaf:config.leaf || false,
+            // background:config.background || ""
+        };
+        return element;
+    }
+    _elementMap.register(COMPONENTS_TYPE.PAGES,Pages);
     /**
      *
      * @param config

@@ -39,13 +39,17 @@
     Content.prototype={
         constructor:Content,
         getCurrentElement:function () {
-          return this._currentElement;
+            return this._currentElement;
         },
         getContainer:function () {
             return  this._contentDom;
         },
         getCurrentDom:function () {
             return this._dom;
+        },
+        showHide:function (isShow) {
+            this._currentElement.isShow = isShow;
+                this._dom.style.display = isShow?"block":"none";
         },
         _addTools:function () {
             var self = this;
@@ -65,8 +69,9 @@
                 overflowX:this._currentElement.overflowX,
                 width:this._currentElement.width,
                 height:this._currentElement.height,
+                display:this._currentElement.isShow?"block":"none"
             }
-            var bgColor = getColor(this._renderClazz.getIsShowBgColor(),this._currentElement.bgColor);
+            var bgColor = getColor(this._renderClazz.getIsShowBgColor(this._currentElement.key),this._currentElement.bgColor);
             if(this._currentElement.background){
                 styles.background = this._currentElement.background;
             }
@@ -99,10 +104,13 @@
                     class:this._renderClazz._getSelectComponentKey()===this._currentElement.key?"yt-dataView-select":""
                 }
             })
+            // if(this._currentElement.text){
+            //     _contentDom.innerHTML = this._currentElement.text
+            // }
+
             if(isPreview){
                 this._sortable = canSortable.call(this,_contentDom,injection);
                 if(this._currentElement.handles){
-
                     this._toolsDom =  createNativeElement("div",{
                         styles:{
                             position:"relative",

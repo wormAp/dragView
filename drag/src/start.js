@@ -301,7 +301,210 @@
                         }
                 }
             },
+            // {
+            //     text:"Contents组件",
+            //     //url:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACqCAIAAABnBpeYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3BpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxNDAzMTVlYy01NTMwLTQzZjktOTQ4Ni04MTRhMWJjOGU5MjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTFGMjlCNjE0M0QzMTFFOTlCMDc5MzIwRjVCOUNCNTkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTFGMjlCNjA0M0QzMTFFOTlCMDc5MzIwRjVCOUNCNTkiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCQUNGQTM0MzQyRTIxMUU5OUIwNzkzMjBGNUI5Q0I1OSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCQUNGQTM0NDQyRTIxMUU5OUIwNzkzMjBGNUI5Q0I1OSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pnt7mugAAAF8SURBVHja7NJBCsIwEEDRmppFNwG9gxtBkEKP4dJbuvNwVkmIoadI4b3FMMth+Ifp8Ry6knM4neN9OV6u9fft5apxrOtnfb/abHsvV5USUoq3ua9fbcIAwkJYCAuEhbAQFggLYSEsEBbCQlggLISFsEBYCAthgbAQFsICYSEshAXCQlgIC4SFsBAWCAthISwQFsJCWCAshIWwQFgIC2GBsBAWwgJhISyEBcJCWAgLhIWwEBYIC2EhLBAWwkJYICyEhbBAWAgLYYGwEBbCAmEhLIQFwkJYCAuEhbAQFggLYSEsEBbCQlgIywsQFsJCWCAshIWwQFgIC2GBsBAWwgJhISyEBcJCWAgLhIWwEBYIC2EhLBAWwkJYICyEhbBAWAgLYYGwEBbCAmEhLIQFwkJYCAuEhbAQFggLYSEsEBbCQlggLISFsEBYCAthgbAQFsICYSEshAXCQlgIC4SFsBAWCAthISwQFsJCWCAshIWwQFgIC2GBsBAWu/IXYACrTxXLp9p4eQAAAABJRU5ErkJggg==",
+            //     data: {
+            //         "type":sources.COMPONENTS_TYPE.CONTENTS,
+            //         // "sortNumber":4,
+            //         "configs":
+            //             {
+            //                 "element": {
+            //                     "key":6,"parentKey":-1,contentsNumber:5,currentIndex:1,background:[],overflowY:"auto",overflowY:"auto",
+            //                     _configure:{
+            //                         text:"Contents组件",
+            //                         fields:[{key:"currentIndex",text:"当前选中"},{key:"contentsNumber",text:"内容个数"},{key:"background",text:"Col的背景"}]
+            //                     }
+            //                 }
+            //             }
+            //     }
+            // },
+            {
+                text:"多页布局",
+                data: {
+                    "type":sources.COMPONENTS_TYPE.PAGES,
+                    "configs":
+                        {
+                            "element":[{
+                                "type": sources.COMPONENTS_TYPE.CONTENT,
+                                "configs": {
+                                    "element": {
+                                        // "$type": "content",
+                                        "put": false,
+                                        "key": "-1",
+                                        "bgColor": "#fff",
+                                        "parentKey": null,
+                                        "width": "100%",
+                                        "height": "100%",
+                                        "overflowX": "hidden",
+                                        "overflowY": "hidden",
+                                        "dropComponent": false,
+                                        "handles": false,
+                                        "_configure": {},
+                                        "rootKey": "",
+                                        "leaf": false
+                                    }
+                                }
+                            }, {
+                                "type":sources.COMPONENTS_TYPE.LAYOUT,
+                                "configs": {
+                                    "element": {
+                                        "$type": sources.COMPONENTS_TYPE.LAYOUT,
+                                        "put": false,
+                                        "key": "1",
+                                        "parentKey": "-1",
+                                        "leaf": false
+                                    }
+                                }
+                            }, {
+                                "type": sources.COMPONENTS_TYPE.CONTENT,
+                                "configs": {
+                                    "element": {
+                                        "$type": sources.COMPONENTS_TYPE.CONTENT,
+                                        "put": false,
+                                        "key": "2",
+                                        "bgColor": "#4E7CB077",
+                                        "parentKey": "1",
+                                        "width": "100%",
+                                        "height": "70px",
+                                        "overflowX": "hidden",
+                                        "overflowY": "hidden",
+                                        "dropComponent": false,
+                                        "handles": false,
+                                        "leaf": true,
+                                        "_type":sources.COMPONENTS_TYPE.PAGES
+                                    }
+                                }
+                            }, {
+                                "type": sources.COMPONENTS_TYPE.CONTENT,
+                                "configs": {
+                                    "element": {
+                                        "$type":sources.COMPONENTS_TYPE.CONTENT,
+                                        "put": false,
+                                        "key": "3",
+                                        "bgColor": "#827D2977",
+                                        "parentKey": "1",
+                                        "width": "100%",
+                                        "height": "auto",
+                                        "overflowX": "hidden",
+                                        "overflowY": "auto",
+                                        "dropComponent": false,
+                                        "handles": false,
+                                        "leaf": false
+                                    }
+                                }
+                            }, {
+                                "type": sources.COMPONENTS_TYPE.CONTENTS,
+                                "configs": {
+                                    "element": {
+                                        "$type": sources.COMPONENTS_TYPE.CONTENTS,
+                                        "put": false,
+                                        "key": "4",
+                                        "parentKey": "3",
+                                        "overflowX": "hidden",
+                                        "overflowY": "auto",
+                                        "dropComponent": false,
+                                        "handles":false,
+                                        "leaf": false,
+                                        "contentsNumber": 5,
+                                        "currentIndex": 1
+                                    }
+                                }
+                            }, {
+                                "type":sources.COMPONENTS_TYPE.CONTENT,
+                                "configs": {
+                                    "element": {
+                                        "$type":sources.COMPONENTS_TYPE.CONTENT,
+                                        // "put": false,
+                                        "key": "5",
+                                        "parentKey": "4",
+                                        "overflowX": "hidden",
+                                        "overflowY": "auto",
+                                        "dropComponent": false,
+                                        "handles": false,
+                                        "width":"100%",
+                                        "height":"100%",
+                                        "leaf": true,
+                                        "isShow": true
+                                    }
+                                }
+                            }, {
+                                "type": sources.COMPONENTS_TYPE.CONTENT,
+                                "configs": {
+                                    "element": {
+                                        "$type": sources.COMPONENTS_TYPE.CONTENT,
+                                        "put": false,
+                                        "key": "6",
+                                        "parentKey": "4",
+                                        "overflowX": "hidden",
+                                        "overflowY": "auto",
+                                        "dropComponent": false,
+                                        "handles": false,
+                                        "width":"100%",
+                                        "height":"100%",
+                                        "leaf": true,
+                                        "isShow": false
+                                    }
+                                }
+                            }, {
+                                "type": sources.COMPONENTS_TYPE.CONTENT,
+                                "configs": {
+                                    "element": {
+                                        "$type":sources.COMPONENTS_TYPE.CONTENT,
+                                        "put": false,
+                                        "key": "7",
+                                        "parentKey": "4",
+                                        "overflowX": "hidden",
+                                        "overflowY": "auto",
+                                        "width":"100%",
+                                        "height":"100%",
+                                        "dropComponent": false,
+                                        "handles": false,
+                                        "leaf": true,
+                                        "isShow": false
+                                    }
+                                }
+                            }, {
+                                "type": sources.COMPONENTS_TYPE.CONTENT,
+                                "configs": {
+                                    "element": {
+                                        "$type": sources.COMPONENTS_TYPE.CONTENT,
+                                        "put": false,
+                                        "key": "8",
+                                        "parentKey": "4",
+                                        "overflowX": "hidden",
+                                        "overflowY": "auto",
+                                        "dropComponent": false,
+                                        "width":"100%",
+                                        "height":"100%",
+                                        "handles": false,
+                                        "leaf": true,
+                                        "isShow": false
+                                    }
+                                }
+                            }, {
+                                "type": sources.COMPONENTS_TYPE.CONTENT,
+                                "configs": {
+                                    "element": {
+                                        "$type": sources.COMPONENTS_TYPE.CONTENT,
+                                        "put": false,
+                                        "key": "9",
+                                        "parentKey": "4",
+                                        "overflowX": "hidden",
+                                        "overflowY": "auto",
+                                        "dropComponent": false,
+                                        "width":"100%",
+                                        "height":"100%",
+                                        "handles": false,
+                                        "leaf": true,
+                                        "isShow": false
+                                    }
+                                }
+                            }]
 
+                        }
+                }
+            },
             {
                 text:"拖动组件",
                 url:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACqCAIAAABnBpeYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxNDAzMTVlYy01NTMwLTQzZjktOTQ4Ni04MTRhMWJjOGU5MjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTcyMTNDRjU0MkUzMTFFOTlCMDc5MzIwRjVCOUNCNTkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTcyMTNDRjQ0MkUzMTFFOTlCMDc5MzIwRjVCOUNCNTkiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxNDAzMTVlYy01NTMwLTQzZjktOTQ4Ni04MTRhMWJjOGU5MjEiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDphMjVkMGNjYS04YWEwLTExN2MtOGVlYi04ODkzYTBjZjc5ZTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7qdEg1AAABRklEQVR42uzSQQ0AMAgAsTFjKMIsijDBh6SVcLnoygfbvgQYC2NhLDAWxsJYYCyMhbHAWBgLY4GxMBbGAmNhLIwFxsJYGAuMhbEwFhgLY2EsMBbGwlhgLIyFscBYGAtjgbEwFsYCY2EsjAXGwlgYC4yFsTAWGAtjYSwwFsbCWGAsjIWxwFgYC2OBsTAWxgJjYSyMBcbCWBgLjIWxMBYYC2NhLDAWxsJYYCyMhbHAWBgLY4GxMBbGwlhgLIyFscBYGAtjgbEwFsYCY2EsjAXGwlgYC4yFsTAWGAtjYSwwFsbCWGAsjIWxwFgYC2OBsTAWxgJjYSyMBcbCWBgLjIWxMBYYC2NhLDAWxsJYYCyMhbHAWBgLY4GxMBbGAmNhLIwFxsJYGAuMhbEwFhgLY2EsMBbGwlhgLIyFscBYGAtjgbEwFreMAAMAT0MC0sL+QGkAAAAASUVORK5CYII=",
@@ -322,7 +525,7 @@
                                         {key:"bottom",text:"bottom"},
                                         {key:"left",text:"left"},
                                         {key:"right",text:"right"}
-                                        ]
+                                    ]
                                 },leaf:true
                             }
                         }
@@ -364,6 +567,7 @@
                         }
                 }
             },
+
         ];
         var clazz = [
             {
@@ -394,11 +598,11 @@
     function getPreviewJsonData() {
         return Generate.generate.getPreviewJsonData();
     }
-    function selectByKey(key) {
-        Generate.generate.selectByKey(key);
-    }
     function changeBgColor(color) {
         Generate.generate.changeBgColor(color);
+    }
+    function selectByKey(key) {
+        Generate.generate.selectByKey(key);
     }
     function changePainting(width,height) {
         var projectConfigs = Generate.generate.getProjectConfigs();
@@ -410,7 +614,11 @@
         Generate.generate.renderComponentList(data.componentConfigs,{canDrag:true});
         Generate.generate.render(projectConfigs);
     }
+    function changePage(key,index) {
+        Generate.generate.changePage(key,index);
+    }
     nameSpace.Face = {
+        changePage:changePage,
         selectByKey:selectByKey,
         getPreviewJsonData:getPreviewJsonData,
         isShowBgColor:isShowBgColor,

@@ -29,6 +29,19 @@
             this._projectMap = null;
             this._componentListConfigs = [];
             this._projectConfigs = [];
+            var height = paintingConfigs.height;
+            if(document.getElementById("root")){
+                if(paintingConfigs.height.indexOf("px")>0){
+                    var h = document.getElementById("root").offsetHeight;
+                    if(parseFloat(paintingConfigs.height)>h){
+                        height = h-22+"px";
+                    }else{
+                        height = h+22+"px";
+                    }
+                }
+
+            }
+            console.log(height)
             this._layoutViewConfigs = [
                 {
                     "type":sources.COMPONENTS_TYPE.CONTENT,
@@ -57,7 +70,7 @@
                         {
                             "element":
                                 {
-                                    "key":2,"bgColor":"#ddc710","parentKey":-1,"width":"100%","height":"auto"
+                                    "key":2,"bgColor":"#1C1E24","parentKey":-1,"width":"100%","height":"auto"
                                 }
                         }
                 },
@@ -79,7 +92,7 @@
                         {
                             "element":
                                 {
-                                    "key":5,"bgColor":"#ccc","parentKey":2,"width":"auto","height":"100%",overflowX:"auto",overflowY:"auto"
+                                    "key":5,"bgColor":"#ccc","parentKey":2,"width":"auto","height":height,overflowX:"auto",overflowY:"auto"
                                 }
                         }
                 },
@@ -154,14 +167,6 @@
             render.render(!!isPreview);
             return ({componentsMap:componentsMap,render:render});
         },
-        selectByKey:function (key) {
-            if( this._projectMap){
-                var component = this._projectMap.getComponent(key);
-                if(component){
-                    component.getCurrentDom().onclick();
-                }
-            }
-        },
         renderLayout:function (configs) {
             var self = this;
             configs = configs || {};
@@ -217,14 +222,34 @@
             });
             var listContent = this._LayoutComponentsMap.getComponent(6);
             var obj  = this._doRenderWork("clazzList",clazzList,rootKey,listContent.getContainer());
-          //  this._componentListMap=obj.componentsMap;
-           // this._componentRender = obj.render;
+            //  this._componentListMap=obj.componentsMap;
+            // this._componentRender = obj.render;
             var rootComponent = obj.componentsMap.getComponent(rootKey);
             this._dragComponentList(rootComponent.getContainer());
             event.addHandle(TYPES.SHOW,"clickClazz",function (configs) {
-                 self.renderComponentList(configs,{canDrag:true});
+                self.renderComponentList(configs,{canDrag:true});
             })
             //clickClazz
+        },
+        selectByKey:function (key) {
+            if( this._projectMap){
+                var component = this._projectMap.getComponent(key);
+                if(component){
+                    component.getCurrentDom().onclick();
+                }
+            }
+        },
+        changePage:function (key,index) {
+            if( this._projectMap){
+                var component = this._projectMap.getComponent(key);
+                if(component){
+                    var contentsKey = component.getCurrentElement().contentsKey;
+                    if(contentsKey){
+                        var contents = this._projectMap.getComponent(contentsKey);
+                        contents.changeCurrentIndex(index)
+                    }
+                }
+            }
         },
         _toShowConfig:function (data,configs,rootKey) {
             var _componentListConfigs = [ {
@@ -319,7 +344,7 @@
         },
         getPreviewJsonData:function (filters) {
             filters = filters || [];
-          return this._projectMap.componentMapToConfig(null,filters);
+            return this._projectMap.componentMapToConfig(null,filters);
         },
         flushPreview:function(){
             this._projectRender.repaint(this._rootKey,true);
