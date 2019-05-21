@@ -114,6 +114,7 @@
                     position:"relative",
                     width:"100%",
                     height:"100%",
+                    overflow: "auto auto"
                 },
                 attrs:{
                     "data-key":this._currentElement.key,
